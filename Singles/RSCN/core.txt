@@ -61,8 +61,6 @@ electrostatic_atoms   0 1   # Map only demendent on nitrile atoms
 # choice here should be G, regardless of whether the potential or the field are
 # needed.
 
-# if 'None' as choice for estat ats, this parameter is not required.
-electrostatic_choice V E G   # V, E, or G
 
 # ------------------------
 
