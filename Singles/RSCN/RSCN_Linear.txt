@@ -1,0 +1,7 @@
+# /projects/p209489/pg-home/p209489/OrcaRun/MeSCN
+# Every row corresponds to the next atom in electrostatic_atoms.
+# Every column to an electrostatic property, in the following order:
+# V, E_x, E_y, E_z, G_xx, G_yy, G_zz, G_xy, G_xz, G_yz
+
+0.000 910.105 -30.515 0.000 0.000 0.000 0.000 0.000 0.000 0.000  # C7
+0.000 -491.013 61.488 0.000 0.000 181.860 -225.538 0.000 0.000 -198.845 # N1
