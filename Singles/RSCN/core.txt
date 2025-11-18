@@ -70,7 +70,7 @@ local_atoms   all
 
 # ------------------------
 
-frequency_gas_phase     2187.957648068376
+frequency_gas_phase     2172.5 # From Cho 2008 paper
 frequency_data_file_linear     RSCN_Linear.txt
 frequency_data_file_quadratic  RSCN_Quad.txt
 

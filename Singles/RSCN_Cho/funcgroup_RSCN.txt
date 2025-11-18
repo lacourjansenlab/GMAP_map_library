@@ -1,0 +1,14 @@
+
+functional_group [MSC] C00 N03 C02 S01 H04 H05 H06
+functional_group [MOL] C7  N1  C2  S1  H1  H2  H3
+functional_group [BHCJ] C2 N1 C1 S1 H1 H2 H3 
+
+used_atoms all
+
+electrostatic_atoms 0 1  # We only use nitrile C and N
+
+electrostatic_choice V E G
+
+local_atoms 0 1 2 3 4 5 6
+
+
