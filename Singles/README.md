@@ -57,25 +57,6 @@ This map is intended to use for the tryptophan 1La transition in proteins.
 This map is intended to use with water O (smiles notation). It can be applied both for H2O and HOD, but gives the frequency of the OH stretch.
 
 
-[//]: # "table columns/colors:
-
-origin: in GMAP, not in GMAP  (CSS sandyBrown)
-spectral type: vibrational (CSS indianred), electronic (CSS firebrick) (reds)
-MD type: all atom (CSS forest green), united atom (CSS lime green)  (greens)
-type of group: protein (CSS blueViolet), chlorophyll (CSS turquoise), other (CSS royalblue)   (blues - largest!)
-
-![Static Badge](https://img.shields.io/badge/spectrum-infrared-indianred?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/spectrum-electronic-firebrick?style=flat&labelColor=dimgray)
-
-![Static Badge](https://img.shields.io/badge/MD-all%20atom-forestgreen?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/MD-united%20atom-lawngreen?style=flat&labelColor=dimgray)
-
-![Static Badge](https://img.shields.io/badge/moltype-protein-blueviolet?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/moltype-chlorophyll-turquoise?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/moltype-other-royalblue?style=flat&labelColor=dimgray)
-
-![Static Badge](https://img.shields.io/badge/GMAP-Includes-sandybrown?style=flat&labelColor=dimgray)"
-
 
 
 
