@@ -91,6 +91,7 @@ doublepos_1            0
 # defined by subtracting the position of the zeroeth atom from that of the oneth.
 # the missing ones are found through geometry (cross product)
 
+# ORCA names
 # C2             ^ y
 #   \            |
 #    S1-C7-N1     -> x
