@@ -4,10 +4,10 @@ functional_group_file    functional_group.txt
 
 used_atoms All 			# TYR molecules for the electrostatic interactions
 
-electrostatic_atoms 3-13
+electrostatic_atoms 3-15
 electrostatic_choice V   	# the potential
 
-local_atoms 2-13           # Backbone CONH are included in potential
+local_atoms 2-15           # Backbone CONH are included in potential
 
 frequency_gas_phase 39965 	
 frequency_data_file_linear difference_charges.txt
@@ -28,4 +28,4 @@ doublepos_1 5 * 0.5 + 9 * 0.5			# CD2, CD2 midtpoint
 
 VEG_reference position 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25  	# The position between CD1, CD2, CE1 and CE2
 
-can_output dip
+can_output dip ene ham pos dbp
