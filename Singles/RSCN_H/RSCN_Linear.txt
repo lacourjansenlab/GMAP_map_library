@@ -1,0 +1,8 @@
+# /projects/p209489/pg-home/p209489/OrcaRun/MeSCN
+# Every row corresponds to the next atom in electrostatic_atoms.
+# Every column to an electrostatic property, in the following order:
+# V, E_x, E_y, E_z, G_xx, G_yy, G_zz, G_xy, G_xz, G_yz
+
+0.000 1084.2 50.83 0.000   # C7 Numbers converted from Cho paper with factor
+0.000 -501.1 55.58 0.000   # N1 1439.97 MV/e Å^2/cm - the z components are
+                           # Set to zero
