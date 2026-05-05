@@ -1,6 +1,6 @@
 [TYR]
 N
-H
+H,HN
 CA
 CB
 CG
