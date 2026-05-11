@@ -1,0 +1,14 @@
+[1] C. P. Van Der Vegte, J. D. Prajapati, U. Kleinekathöfer, J. Knoester, and T. L. C. Jansen, “Atomistic Modeling of Two-Dimensional
+    Electronic Spectra and Excited-State Dynamics for a Light Harvesting 2 
+    Complex,” J. Phys. Chem. B, vol. 119, no. 4, pp. 1302–1313, Jan. 2015, 
+    doi: 10.1021/jp509247p.
+[2] M. E. Madjet, A. Abdurahman, and T. Renger, “Intermolecular Coulomb
+    Couplings from Ab Initio Electrostatic Potentials: Application to
+    Optical Transitions of Strongly Coupled Pigments in Photosynthetic
+    Antennae and Reaction Centers,” J. Phys. Chem. B, vol. 110, no. 34,
+    pp. 17268–17281, Aug. 2006, doi: 10.1021/jp0615398.
+[3] I. Renge and K. Mauring, “Spectral shift mechanisms of chlorophylls in
+    liquids and proteins,” Spectrochimica Acta Part A: Molecular and
+    Biomolecular Spectroscopy, vol. 102, pp. 301–313, Feb. 2013,
+    doi: 10.1016/j.saa.2012.10.034.
+
