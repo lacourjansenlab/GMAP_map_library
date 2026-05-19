@@ -1,6 +1,6 @@
 # core file for the bchla map in GMAP
 
-functional_group_file    bchla_functional_group.txt
+functional_group_file    BChla_functional_group.txt
 
 used_atoms All			# use all atoms in the BChl-a molecules for the electrostatic interactions
 
