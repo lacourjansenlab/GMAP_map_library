@@ -231,10 +231,10 @@ def determine_map(pair, map_, system):
     NHvec = GM_mf.PBC_boxdiff_triclin(boxpos[4], boxpos[3], system.boxvects)
 
     # (both pro-pro(should for now be treated as pro-gly) and pro-gly)
-    if Nosc.resnames[1] in ("PRO","HYP"):
+    if Nosc.resnames[1] in ("PRO", "HYP"):
         # In the original code, Pro-Pro is actually treated as Gly-Pro
         if (
-            Cosc.resnames[1] in ("PRO","HYP")
+            Cosc.resnames[1] in ("PRO", "HYP")
             and map_.run_pars.legacy_mode == "AmideImaps"
         ):
             bondtype = "GP"
