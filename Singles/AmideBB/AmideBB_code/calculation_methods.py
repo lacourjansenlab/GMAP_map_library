@@ -111,7 +111,7 @@ def calc_dipole_Jansen(map_, system, osc):
     """
 
     _, r_pos = map_.code.GM_get_dipole_dir(map_, system, osc)
-    if osc.resnames[1] == "PRO":
+    if osc.resnames[1] in ("PRO","HYP"):
         gasdip = map_.core.dipole_gas_phase_array_prepro
         diparr = map_.core.dipole_data_array_prepro
     else:
@@ -234,8 +234,8 @@ def determine_map(osc1, osc2, map_, system):
         fits the given pair.
     """
 
-    # no (pre-)prolines! easy!
-    if "PRO" not in osc2.resnames:
+    # no (pre-)prolines or hydroxyprolines! easy!
+    if not any(res in ("PRO", "HYP") for res in osc2.resnames):
         return ""
 
     # for now, the pro-pro case is treated as if it is pro-gly. in the future,
@@ -246,10 +246,10 @@ def determine_map(osc1, osc2, map_, system):
     NHvec = GM_mf.PBC_boxdiff_triclin(boxpos[4], boxpos[3], system.boxvects)
 
     # (both pro-pro(should for now be treated as pro-gly) and pro-gly)
-    if osc1.resnames[1] == "PRO":
+    if osc1.resnames[1] in ("PRO","HYP"):
         # In the original code, Pro-Pro is actually treated as Gly-Pro
         if (
-            osc2.resnames[1] == "PRO"
+            osc2.resnames[1] in ("PRO","HYP")
             and map_.run_pars.legacy_mode == "AmideImaps"
         ):
             bondtype = "GP"

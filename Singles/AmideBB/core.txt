@@ -7,6 +7,7 @@ functional_group [anyprot] CA C(1) O [anyprot] N(1) H,HN CA
 
 # pre-prolines!
 functional_group [anyprot] CA C(1) O [PRO] N(1) CD CA
+functional_group [anyprot] CA C(1) O [HYP] N(1) CD CA
 
 # special N-termini
 functional_group [FOR] H C(1) O [anyprot] N(1) H,HN CA     # H-C(=O)~ cap

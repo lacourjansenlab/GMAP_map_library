@@ -54,7 +54,7 @@ def get_Tokmakoff_locals(oscillator_list):
     # For Tokmakoff, the locals == used_atoms (as in core.txt). The only
     # exception to this is the prepros, they shouldn't contain the CD atom.
     for osc in oscillator_list:
-        if osc.resnames[1] == "PRO":  # prepro!
+        if osc.resnames[1] in ("PRO","HYP"):  # prepro!
             osc.local_atoms = osc.used_atoms[:4] + [osc.used_atoms[5]]
 
 
@@ -73,7 +73,7 @@ def add_proline_HDs(system, oscillator_list):
 
     sysres = system.residues
     for osc in oscillator_list:
-        if osc.resnames[1] == "PRO":
+        if osc.resnames[1] in ("PRO","HYP"):
             resix = osc.resnums[1]
             firstix = sysres.first_ix[resix]
             lastix = sysres.last_ix[resix]
@@ -150,14 +150,14 @@ def get_proline_atoms(system, osc):
         resnums.append(osc.CtermNB.resnums[1])
     proline_atoms = []
     for resnum in resnums:
-        if system.residues.resnames[resnum] == "PRO":
+        if system.residues.resnames[resnum] in ("PRO","HYP"):
             proline_atoms.extend(range(
                 system.residues.first_ix[resnum],
                 system.residues.last_ix[resnum] + 1
             ))
 
     # But if the one after is a proline, its C=O group shouldn't be added.
-    if osc.CtermNB is not None and osc.CtermNB.resnames[1] == "PRO":
+    if osc.CtermNB is not None and osc.CtermNB.resnames[1] in ("PRO","HYP"):
         resix = osc.CtermNB.resnums[1]
         firstix = system.residues.first_ix[resix]
         lastix = system.residues.last_ix[resix]

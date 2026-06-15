@@ -42,7 +42,7 @@ def GM_adjust_map_core_raw(map_):
     all_amino_acid_codes = [
         "ARG", "HIS", "LYS", "ASP", "GLU", "SER", "THR", "ASN", "GLN",
         "CYS", "GLY", "PRO", "ALA", "VAL", "ILE", "LEU", "MET", "PHE",
-        "TYR", "TRP"
+        "TYR", "TRP", "HYP"
     ]
 
     extended = set(map_.run_pars.include_protein_residues)
@@ -347,6 +347,8 @@ def GM_str_osc(map_, system, oscillator):
 def CP_TRESP_get_charges(map_, system, osc):
     if osc.resnames[1] == "PRO":
         return map_.core.TRESP_pro_charges
+    else if osc.resnames[1] == "HYP":
+        return map_.core.TRESP_pro_charges
     else:
         return map_.core.TRESP_gen_charges
 
@@ -375,6 +377,9 @@ def GM_calculate_frequency(map_, system, osc):
     if osc.resnames[1] == "PRO":
         gasfreq = map_.core.frequency_gas_phase_prepro
         freqarr = map_.core.frequency_data_array_linear_prepro
+    else if osc.resnames[1] == "HYP":
+        gasfreq = map_.core.frequency_gas_phase_prepro
+        freqarr = map_.core.frequency_data_array_linear_prepro    
     else:
         gasfreq = map_.core.frequency_gas_phase
         freqarr = map_.core.frequency_data_array_linear
@@ -529,11 +534,11 @@ def GM_report_references(map_, system):
 
     # do we have any pros?
     pro_present = any(
-        osc.resnames[1] == "PRO"
+        osc.resnames[1] in ("PRO", "HYP")
         for osc in system.oscillators_ordered["AmideBB"]
     )
     gen_present = not all(
-        osc.resnames[1] == "PRO"
+        osc.resnames[1] in ("PRO", "HYP")
         for osc in system.oscillators_ordered["AmideBB"]
     )
 

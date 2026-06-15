@@ -175,7 +175,7 @@ def oscillator_sorter(map_, system, oscillator_list):
         all_amino_acid_codes = [
             "ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY",
             "HIS", "ILE", "LYS", "LEU", "MET",
-            "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL"
+            "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL", "HYP
         ]
         for aa1 in all_amino_acid_codes:
             for aa2 in all_amino_acid_codes:

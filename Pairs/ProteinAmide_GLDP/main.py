@@ -219,8 +219,8 @@ def determine_map(pair, map_, system):
         Nosc = osc2
         Cosc = osc1
 
-    # no (pre-)prolines! easy!
-    if "PRO" not in Cosc.resnames:
+    # no (pre-)prolines or hydroxyprolines! easy!
+    if not any(res in ("PRO", "HYP") for res in Cosc.resnames):
         return ""
 
     # for now, the pro-pro case is treated as if it is pro-gly. in the future,
@@ -231,10 +231,10 @@ def determine_map(pair, map_, system):
     NHvec = GM_mf.PBC_boxdiff_triclin(boxpos[4], boxpos[3], system.boxvects)
 
     # (both pro-pro(should for now be treated as pro-gly) and pro-gly)
-    if Nosc.resnames[1] == "PRO":
+    if Nosc.resnames[1] in ("PRO","HYP"):
         # In the original code, Pro-Pro is actually treated as Gly-Pro
         if (
-            Cosc.resnames[1] == "PRO"
+            Cosc.resnames[1] in ("PRO","HYP")
             and map_.run_pars.legacy_mode == "AmideImaps"
         ):
             bondtype = "GP"
