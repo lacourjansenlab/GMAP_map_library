@@ -53,7 +53,7 @@ AmideBB.dipole_map_choice
 
 AmideBB.include_protein_residues
     no shorthand
-    default: ARN ASH GLH HID HIE HIP HSD LYN LYSH
+    default: ARN ASH GLH HID HIE HIP HSD LYN LYSH HYP
 
     To turn this off, use 'None' (without the quotation marks) as the only choice.
 
