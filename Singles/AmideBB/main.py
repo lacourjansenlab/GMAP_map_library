@@ -42,7 +42,7 @@ def GM_adjust_map_core_raw(map_):
     all_amino_acid_codes = [
         "ARG", "HIS", "LYS", "ASP", "GLU", "SER", "THR", "ASN", "GLN",
         "CYS", "GLY", "PRO", "ALA", "VAL", "ILE", "LEU", "MET", "PHE",
-        "TYR", "TRP"
+        "TYR", "TRP", "HYP"
     ]
 
     extended = set(map_.run_pars.include_protein_residues)
