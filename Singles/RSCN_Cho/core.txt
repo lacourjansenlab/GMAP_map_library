@@ -112,8 +112,6 @@ r_pos     0.5*1 + 0.5*0
 # What should be the midpoint of the sphere defining the charges that can
 # influence VEG.
 
-#VEG_reference  residues 0    # take CoM of all atoms in residue which atom 0 of this oscillator belongs to.
-#VEG_reference  position 1-0  # take #VEG_reference to be this exact position
 VEG_reference  position 0  # take CoM of listed atoms (nitrile carbon)
 
 # ---------------------

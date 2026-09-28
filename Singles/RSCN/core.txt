@@ -77,7 +77,6 @@ frequency_data_file_quadratic  RSCN_Quad.txt
 # ------------------------
 
 dipole_gas_phase        0.01044887302452528 # Calculated in GMAP paper
-#dipole_data_file        magnitude  Skinner_dipole.txt
 
 # -------------------
 
@@ -113,8 +112,6 @@ r_pos     0.5*1 + 0.5*0
 # What should be the midpoint of the sphere defining the charges that can
 # influence VEG.
 
-#VEG_reference  residues 0    # take CoM of all atoms in residue which atom 0 of this oscillator belongs to.
-#VEG_reference  position 1-0  # take #VEG_reference to be this exact position
 VEG_reference  position 0  # take CoM of listed atoms (nitrile carbon)
 
 # ---------------------
