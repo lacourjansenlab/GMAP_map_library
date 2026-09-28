@@ -70,7 +70,7 @@ local_atoms   all
 
 # ------------------------
 
-frequency_gas_phase     2171 # From Baiz 2022 paper
+frequency_gas_phase     2171 # From Zhao at al. 2022 paper
 frequency_data_file_linear     RSCN_Linear.txt
 
 # ------------------------
