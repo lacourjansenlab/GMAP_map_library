@@ -70,13 +70,13 @@ local_atoms   all
 
 # ------------------------
 
-frequency_gas_phase     2171 # From Baiz 2022 paper
+frequency_gas_phase     2171 # From Zhao 2022 paper
 frequency_data_file_linear     RSCN_Linear.txt
 frequency_data_file_quadratic  RSCN_Quad.txt
 
 # ------------------------
 
-dipole_gas_phase        0.01044887302452528
+dipole_gas_phase        0.01044887302452528 # Calculated in GMAP paper
 #dipole_data_file        magnitude  Skinner_dipole.txt
 
 # -------------------

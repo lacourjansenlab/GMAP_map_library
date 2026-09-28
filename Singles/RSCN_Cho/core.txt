@@ -70,12 +70,12 @@ local_atoms   all
 
 # ------------------------
 
-frequency_gas_phase     2171 # From Zhao at al. 2022 paper
+frequency_gas_phase     2171 # From Zhao at al. 2022 paper (Cho paper did not explicitly mention the used gas phase value)
 frequency_data_file_linear     RSCN_Linear.txt
 
 # ------------------------
 
-dipole_gas_phase        0.01044887302452528
+dipole_gas_phase        0.01044887302452528 # Transition-Dipole calculation was reported in GMAP paper (in preparation). No explicit value was reported in the Cho/Choi paper. 
 
 # -------------------
 
