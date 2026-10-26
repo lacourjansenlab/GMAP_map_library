@@ -52,7 +52,6 @@ This map is intended to use for the tryptophan 1La transition in proteins.
 ![Static Badge](https://img.shields.io/badge/spectrum-electronic-darkred?style=flat&labelColor=dimgray)
 ![Static Badge](https://img.shields.io/badge/MD-united%20atom-limegreen?style=flat&labelColor=dimgray)
 ![Static Badge](https://img.shields.io/badge/moltype-protein-blueviolet?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/GMAP-Includes-sandybrown?style=flat&labelColor=dimgray)
 
 This map is intended to use for the tyrosine S0 to S1 transition in proteins.
 
