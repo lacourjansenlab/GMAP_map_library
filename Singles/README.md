@@ -48,6 +48,14 @@ This map is designed for the organic pigment Chlorophyll b in protein environmen
 
 This map is intended to use for the tryptophan 1La transition in proteins.
 
+## Tyrosine ([GHlacour](https://github.com/GHlacour), GMAP developer)
+![Static Badge](https://img.shields.io/badge/spectrum-electronic-darkred?style=flat&labelColor=dimgray)
+![Static Badge](https://img.shields.io/badge/MD-united%20atom-limegreen?style=flat&labelColor=dimgray)
+![Static Badge](https://img.shields.io/badge/moltype-protein-blueviolet?style=flat&labelColor=dimgray)
+![Static Badge](https://img.shields.io/badge/GMAP-Includes-sandybrown?style=flat&labelColor=dimgray)
+
+This map is intended to use for the tyrosine S0 to S1 transition in proteins.
+
 ## Water ([GHlacour](https://github.com/GHlacour), GMAP developer)
 ![Static Badge](https://img.shields.io/badge/spectrum-infrared-indianred?style=flat&labelColor=dimgray)
 ![Static Badge](https://img.shields.io/badge/MD-all%20atom-darkgreen?style=flat&labelColor=dimgray)
