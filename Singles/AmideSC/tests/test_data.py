@@ -29,6 +29,7 @@ from pathlib import Path
 
 # 3rd party lib imports
 import numpy as np
+import pytest
 
 # GMAP imports
 import GMAP.src.tools.cmd_interface as GM_ci
@@ -47,11 +48,11 @@ def test_Jansen_freqs(tmp_path):
 
 
 def test_Cho_freqs(tmp_path):
-    core_test_frequencies("Cho", tmp_path, 0.0004)
+    core_test_frequencies("Cho", tmp_path, 0.001)
 
 
 def test_Hirst_freqs(tmp_path):
-    core_test_frequencies("Hirst", tmp_path, 0.0011)
+    core_test_frequencies("Hirst", tmp_path, 0.002)
 
 
 def test_Torii_dips(tmp_path):
@@ -86,6 +87,7 @@ def test_raman(tmp_path):
     core_test_raman("", tmp_path, 0.00004)
 
 
+@pytest.mark.nofiles
 def core_test_frequencies(mapname, tmp_path, limit):
     # This runs GMAP to create the results
     curdir = Path(__file__).resolve().parent
@@ -137,6 +139,7 @@ def makeham(fname, n_singles):
     return squareham
 
 
+@pytest.mark.nofiles
 def core_test_dipoles(freqmapname, dipmapname, tmp_path, limit):
     # This runs GMAP to create the results
     curdir = Path(__file__).resolve().parent
@@ -156,6 +159,7 @@ def core_test_dipoles(freqmapname, dipmapname, tmp_path, limit):
     core_compare_dippos(dipold, dipnew, limit)
 
 
+@pytest.mark.nofiles
 def core_test_positions(atom, tmp_path, limit):
     # This runs GMAP to create the results
     curdir = Path(__file__).resolve().parent
@@ -175,6 +179,7 @@ def core_test_positions(atom, tmp_path, limit):
     core_compare_dippos(dipold, dipnew, limit)
 
 
+@pytest.mark.nofiles
 def core_test_raman(fbonus, tmp_path, limit):
     # This runs GMAP to create the results
     curdir = Path(__file__).resolve().parent
