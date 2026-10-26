@@ -1,13 +1,22 @@
 # GMAP_map_library
-A collection of maps to use in the GMAP program. The GMAP installation comes with a few maps already, any others can be found here. Have you created your own map? Please share it here!
+A collection of maps to use in the [GMAP](https://github.com/lacourjansenlab/GMAP_development) program. The GMAP download comes with a few maps already, any others can be found here. Have you created your own map? Please share it here!
 
 ## Important notes:
 - Installation instructions can be found further down.
 - Some maps require other maps to function, some might need you to compile a c-library. In any case, **make sure you read the README of every map** you download **carefully**, to see if it requires any further steps/attention.
 - When accepting maps from other users, we (GMAP development team) cannot always test/verify scientific accuracy. We will try to confirm safety/applicability of maps as much as possible, but the final responsibility lies with map creators.
 
+
+## On this page
+- [Guided Tour](#guided-tour)
+- [How to install and use maps](#how-to-install-and-use-maps)
+- [How to create your own map](#how-to-create-your-own-map)
+- [How to share your map with us](#how-to-share-your-map-with-us)
+- [How to cite](#how-to-cite)
+
+
 ## Guided Tour
-Welcome! To use any of the files here, you'll need a working GMAP installation. The development version of GMAP can be found [here](https://github.com/lacourjansenlab/GMAP_development), a stable release repository is coming soon. After you downloaded and installed GMAP, you can pick your favorite maps. Here follows an overview of the files in this repository:
+Welcome! To use any of the files here, you'll need a working GMAP installation. GMAP is developed [here](https://github.com/lacourjansenlab/GMAP_development), stable releases can be downloaded [here](https://github.com/lacourjansenlab/GMAP/releases). After you downloaded and installed GMAP, you can pick your favorite maps. Here follows an overview of the files in this repository:
 
 ### Singles
 The singles directory contains all maps that deal with calculating properties of a single type of chromophore. A singles map might calculate absorption frequencies (diagonal elements of the Hamiltonian), transition dipole moments, raman tensor, and provide the position of the chromophore. Without an active singles map, GMAP cannot function.
@@ -26,6 +35,19 @@ Some maps share certain traits and information. This is stored in files in the m
 5. In your input parameter file (or on the command line) use the parameter `map_directory` to tell GMAP to use your newly created maps directory, including your freshly downloaded maps. This line needs to be present in any input file using your newly downloaded maps. While multiple map directories can be specified here it is generally discouraged to do so without good reason as it may become unclear which map was actually used. The program does not allow you to choose which edition to pick if a map of the same name occurs in multiple provided directories!
 6. Now, the maps are ready to use! Don't forget to select them using the `maps_to_use` parameter! 
 
+
+## How to create your own map
+
+If you want to use GMAP for a different molecule than those we have maps available for, you will have to create your own. Depending on the circumstances, this process can be very easy, or more difficult. Creating a map involves two steps:
+
+- obtaining mapping parameters
+- explaining these mapping parameters to GMAP
+
+For many molecules, mapping parameters already exist in literature. If you have already obtained them, you've got the most difficult step behind you. We will not go into the process of obtaining these parameters here.
+
+The process of putting these parameters into a format GMAP can understand is explained in detail in [the GMAP documentation pages](https://lacourjansenlab.github.io/GMAP/development/Adding_a_new_map/index.html).
+
+
 ## How to share your map with us
 
 If you're a member of the lacourjansenlab organization (and a physical member of our group), it is more convenient to work through issues and branches. Please just come to my office to discuss.
@@ -37,3 +59,9 @@ If you're not a member of our group, please do the following instead:
 4. A member from our organization will review the map, and might request changes.
 5. Make sure to answer any questions clearly, and make changes where needed.
 6. After any necessary changes are made, we will complete the request and add your map to the repository.
+
+
+## How to cite
+When you use any map with GMAP, make sure to cite the correct work/people! If a map has been constructed correctly, GMAP will tell you which references apply to a specific calculation when the calculation is run. Any references that do not apply are left out, and the ones that are mentioned, will have their role listed. That way, you do not only know who/what to cite, but also why.
+
+To cite GMAP itself, please cite [this](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15010172) paper.
