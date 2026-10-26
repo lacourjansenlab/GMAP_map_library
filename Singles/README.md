@@ -60,7 +60,6 @@ This map is intended to use with water O (smiles notation). It can be applied bo
 ![Static Badge](https://img.shields.io/badge/spectrum-infrared-indianred?style=flat&labelColor=dimgray)
 ![Static Badge](https://img.shields.io/badge/MD-all%20atom-darkgreen?style=flat&labelColor=dimgray)
 ![Static Badge](https://img.shields.io/badge/moltype-other-darkblue?style=flat&labelColor=dimgray)
-![Static Badge](https://img.shields.io/badge/GMAP-Includes-sandybrown?style=flat&labelColor=dimgray)
 
 This map is intended to use with methylthiocyanate CSC#N (smiles notation) as well as for thiocyanate labels. 
 
