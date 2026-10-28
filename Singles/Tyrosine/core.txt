@@ -21,7 +21,7 @@ dipole_gas_phase  1.3137  # Debye from 10.1021/acsomega.4c11321
 r_vec 9 - 11    # Y-axis in direction of CE1 from CE2
 r_pos 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25        		# The position between CD1, CD2, CE1 and CE2
 
-position 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25 			# write positions to file. The position of the molecule is set at the mg atom position, used for coupling on the fly in NISE
+position 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25 			# write positions to file same as defined above. 
 
 doublepos_0 7 * 0.5 + 11 * 0.5			# CD1, CE1 midtpoint
 doublepos_1 5 * 0.5 + 9 * 0.5			# CD2, CD2 midtpoint

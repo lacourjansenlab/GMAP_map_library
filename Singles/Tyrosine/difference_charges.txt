@@ -1,3 +1,6 @@
+# These united atom parameters we obtained by
+# including difference charges on the 'all-atom'
+# hydrogens in the directly connected heavy atom.
 # 0 # N 
 # 0 # H 
 # 0 # CA 

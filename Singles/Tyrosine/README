@@ -16,7 +16,8 @@ The map currently only provide the transtion dipole for the examination of aniso
 Available parameters
 --------------------
 At this point the frequency map has no options or parameters.
-Calculation of energies would be a good future addition.
+The current map assume a united atom description of tyrosine.
+Difference charges for an all-atom map are available in the difference_charges_aa.txt file, but not currently active.
 
 Warnings that can be raised by this map
 ---------------------------------------
