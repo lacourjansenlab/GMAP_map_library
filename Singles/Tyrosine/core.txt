@@ -1,0 +1,31 @@
+# core file for the TYR_UV map in GMAP
+
+functional_group_file    functional_group.txt
+
+used_atoms All 			# TYR molecules for the electrostatic interactions
+
+electrostatic_atoms 3-15
+electrostatic_choice V   	# the potential
+
+local_atoms 2-15           # Backbone CONH are included in potential
+
+frequency_gas_phase 39965 	
+frequency_data_file_linear difference_charges.txt
+
+# Conversion factor for e^2/4 pi epsilon 1161409.733
+multiply_freq GM_con.e2i4pieps_angcm
+
+dipole_gas_phase  1.3137  # Debye from 10.1021/acsomega.4c11321
+
+# Transition dipole moment goes between CE1 and CE2
+r_vec 9 - 11    # Y-axis in direction of CE1 from CE2
+r_pos 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25        		# The position between CD1, CD2, CE1 and CE2
+
+position 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25 			# write positions to file same as defined above. 
+
+doublepos_0 7 * 0.5 + 11 * 0.5			# CD1, CE1 midtpoint
+doublepos_1 5 * 0.5 + 9 * 0.5			# CD2, CD2 midtpoint
+
+VEG_reference position 5 * 0.25 + 7 * 0.25 + 9 * 0.25 + 11 * 0.25  	# The position between CD1, CD2, CE1 and CE2
+
+can_output dip ene ham pos dbp
