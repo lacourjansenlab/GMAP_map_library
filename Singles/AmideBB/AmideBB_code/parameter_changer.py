@@ -172,27 +172,38 @@ def oscillator_sorter(map_, system, oscillator_list):
     # then, sort oscillators
     newlist = []
     if map_.run_pars.residue_order == "resname":
+
+        # First, lets build up a list of all residue names that can be expected
         all_amino_acid_codes = [
             "ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY",
             "HIS", "ILE", "LYS", "LEU", "MET",
-            "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL", "HYP"
+            "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL"
         ]
-        for aa1 in all_amino_acid_codes:
-            for aa2 in all_amino_acid_codes:
-                for ix, oscillator in enumerate(oscillator_list):
-                    if oscillator.resnames == (aa1, aa2):
-                        newlist.append(oscillator_list.pop(ix))
+        extended = set(map_.run_pars.include_protein_residues)
+        extended.discard("None")
+        if len(extended) > 0:
+            extended = list(extended)
+            all_amino_acid_codes += extended
+
+        # Make a dict relating a resname to its index in the above list.
+        # A dict is useful in case we encounter a resname not in the above
+        # list - those can just go last.
+        # One way of not having a resname in the above list is when someone
+        # adds a new name to the 'all_amino_acid_codes' list in main.py.
+        sortorder = {
+            resname: ix for ix, resname
+            in enumerate(all_amino_acid_codes)
+        }
+        n_items = len(sortorder.keys())
+        newlist = sorted(
+            oscillator_list, key=lambda osc: (
+                sortorder.get(osc.resnames[0], n_items),
+                sortorder.get(osc.resnames[1], n_items)
+            )
+        )
     else:
         # now, choice is 'resnum'. To change order to AIM order:
-        while len(oscillator_list) > 0:
-            smallest_ix = 0
-            smallest_resix = 999999999
-            for ix, oscillator in enumerate(oscillator_list):
-                resix = system.resnums[oscillator.used_atoms[0]]
-                if resix < smallest_resix:
-                    smallest_resix = resix
-                    smallest_ix = ix
-            newlist.append(oscillator_list.pop(smallest_ix))
+        newlist = sorted(oscillator_list, key=lambda osc: osc.resnums[0])
 
     return newlist
 

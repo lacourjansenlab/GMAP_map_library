@@ -14,7 +14,6 @@ import GMAP.src.tools.constants as GM_con
 import GMAP.src.tools.exceptions as GM_ex
 import GMAP.src.tools.default_map_functions as GM_dmf
 import GMAP.src.tools.print_tools as GM_pt
-# from GMAP.src.tools.print_tools import devprint as dpr
 
 # own module imports
 import AmideSC_code.calculation_methods as MC_cm

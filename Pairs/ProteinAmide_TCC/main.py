@@ -53,7 +53,10 @@ def prep_coupling(oscixlist, osclist, system, map_):
         z = GM_mf.crossprod(COvec, CNvec)
         z /= GM_mf.vec3_len(z)
 
-        if osc.map.name == "AmideSC" or (osc.resnames[1] not in ("PRO", "HYP")):
+        if (
+            osc.map.name == "AmideSC"
+            or (osc.resnames[1] not in ("PRO", "HYP"))
+        ):
             alpha = map_.alpha_gen
             v = map_.v_gen
         else:
@@ -117,7 +120,7 @@ def calc_coupling(oscix1, oscix2, map_, system):
         q1 = map_.q_pro
         dq1 = map_.dq_pro
 
-    if osc2.map.name == "AmideSC" or osc2.resnames[1] not in("PRO", "HYP"):
+    if osc2.map.name == "AmideSC" or osc2.resnames[1] not in ("PRO", "HYP"):
         q2 = map_.q_gen
         dq2 = map_.dq_gen
     else:

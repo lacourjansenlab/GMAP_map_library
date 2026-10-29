@@ -7,7 +7,6 @@ import GMAP.src.tools.constants as GM_con
 import GMAP.src.tools.default_map_functions as GM_dmf
 import GMAP.src.tools.exceptions as GM_ex
 import GMAP.src.tools.print_tools as GM_pt
-from GMAP.src.tools.print_tools import devprint as dpr
 
 # own module imports
 import AmideBB_code.calculation_methods as MC_cm
@@ -41,10 +40,13 @@ def GM_adjust_map_core_raw(map_):
     """
 
     # adjusting the names of functional_group
+
+    # YOU SHOULD NEVER HAVE TO ADD ANY OTHERS HERE!
+    # Please use the run parameter 'include_protein_residues' instead.
     all_amino_acid_codes = [
         "ARG", "HIS", "LYS", "ASP", "GLU", "SER", "THR", "ASN", "GLN",
         "CYS", "GLY", "PRO", "ALA", "VAL", "ILE", "LEU", "MET", "PHE",
-        "TYR", "TRP", "HYP"
+        "TYR", "TRP"
     ]
 
     extended = set(map_.run_pars.include_protein_residues)

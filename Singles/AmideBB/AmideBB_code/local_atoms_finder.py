@@ -157,7 +157,7 @@ def get_proline_atoms(system, osc):
             ))
 
     # But if the one after is a proline, its C=O group shouldn't be added.
-    if osc.CtermNB is not None and osc.CtermNB.resnames[1] in ( "PRO", "HYP"):
+    if osc.CtermNB is not None and osc.CtermNB.resnames[1] in ("PRO", "HYP"):
         resix = osc.CtermNB.resnums[1]
         firstix = system.residues.first_ix[resix]
         lastix = system.residues.last_ix[resix]
