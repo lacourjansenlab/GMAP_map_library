@@ -7,7 +7,6 @@ import GMAP.src.tools.constants as GM_con
 import GMAP.src.tools.default_map_functions as GM_dmf
 import GMAP.src.tools.exceptions as GM_ex
 import GMAP.src.tools.print_tools as GM_pt
-from GMAP.src.tools.print_tools import devprint as dpr
 
 # own module imports
 import AmideBB_code.calculation_methods as MC_cm
@@ -41,6 +40,9 @@ def GM_adjust_map_core_raw(map_):
     """
 
     # adjusting the names of functional_group
+
+    # YOU SHOULD NEVER HAVE TO ADD ANY OTHERS HERE!
+    # Please use the run parameter 'include_protein_residues' instead.
     all_amino_acid_codes = [
         "ARG", "HIS", "LYS", "ASP", "GLU", "SER", "THR", "ASN", "GLN",
         "CYS", "GLY", "PRO", "ALA", "VAL", "ILE", "LEU", "MET", "PHE",
@@ -445,7 +447,7 @@ def GM_calculate_frequency(map_, system, osc):
         The frequency calculated for this oscillator this frame.
     """
 
-    if osc.resnames[1] == "PRO":
+    if osc.resnames[1] in ("PRO", "HYP"):
         gasfreq = map_.core.frequency_gas_phase_prepro
         freqarr = map_.core.frequency_data_array_linear_prepro
     else:
@@ -620,11 +622,11 @@ def GM_report_references(map_, system):
 
     # do we have any pros?
     pro_present = any(
-        osc.resnames[1] == "PRO"
+        osc.resnames[1] in ("PRO", "HYP")
         for osc in system.oscillators_ordered["AmideBB"]
     )
     gen_present = not all(
-        osc.resnames[1] == "PRO"
+        osc.resnames[1] in ("PRO", "HYP")
         for osc in system.oscillators_ordered["AmideBB"]
     )
 
