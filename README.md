@@ -5,6 +5,7 @@ A collection of maps to use in the [GMAP](https://github.com/lacourjansenlab/GMA
 - Installation instructions can be found further down.
 - Some maps require other maps to function, some might need you to compile a c-library. In any case, **make sure you read the README of every map** you download **carefully**, to see if it requires any further steps/attention.
 - When accepting maps from other users, we (GMAP development team) cannot always test/verify scientific accuracy. We will try to confirm safety/applicability of maps as much as possible, but the final responsibility lies with map creators.
+- The maps in this repository are licensed under CC-BY-NC-SA-4.0, but GMAP is not. When using these maps with GMAP, make sure you conform to its license, too. When sharing a map, make sure you adhere to the license, too. More details are in the contributing.md.
 
 
 ## On this page
@@ -55,10 +56,11 @@ If you're a member of the lacourjansenlab organization (and a physical member of
 If you're not a member of our group, please do the following instead:
 1. Create a fork of this repo.
 2. Add your map to your fork of the repo. Make sure the map is tested with GMAP and works without errors. Also make sure it gives the correct results. The 'checklist' page in the GMAP repo can help with this. (click 'customizable maps' in the built documentation, or go to the adding_a_new_map directory in the documentation files).
-3. Open a pull request from your fork to the original repo on lacourjansenlab (to the main branch).
-4. A member from our organization will review the map, and might request changes.
-5. Make sure to answer any questions clearly, and make changes where needed.
-6. After any necessary changes are made, we will complete the request and add your map to the repository.
+3. Make sure your map follows the license: No (parts of) the original paper (text, formatting, screenshots, pdf) are present, unless the journal allows this explicitly. Any journal allows you using the data itself. It should also reference the source of the data: your paper. This should be done in the .bib file. If done appropriately, GMAP will automatically notify any user of the map of the relevant citations.
+4. Open a pull request from your fork to the original repo on lacourjansenlab (to the main branch).
+5. A member from our organization will review the map, and might request changes.
+6. Make sure to answer any questions clearly, and make changes where needed.
+7. After any necessary changes are made, we will complete the request and add your map to the repository.
 
 
 ## How to cite
